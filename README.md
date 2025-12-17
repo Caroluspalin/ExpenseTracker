@@ -2,9 +2,6 @@
 <img width="1440" height="900" alt="Kuva" src="https://github.com/user-attachments/assets/bf29dae3-35b6-4492-bcf4-5b8ea7c93beb" />
 A modern, high-fidelity expense tracking web application featuring a "Glassmorphism" UI design. This application allows users to track income and expenses with a professional fintech-inspired interface.
 
-![Project Preview](preview.png)
-*(Note: Replace 'preview.png' with a screenshot of your app once you run it!)*
-
 ## ✨ Features
 
 - **Modern UI/UX:** Clean, premium aesthetic using glassmorphism, soft shadows, and smooth CSS animations.
