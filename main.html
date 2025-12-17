@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Expense Tracker</h1>
+    </header>
+
+    <main>
+        <section class="summary">
+            <h2>Overview</h2>
+            <div id="balance-container" class="balance">
+                 <p>Total Balance: <span id="total-balance">0.00 €</span></p>
+            </div>
+
+            <div class="financial-breakdown">
+        <div class="income-box">
+            <h4>Income</h4>
+            <p id="total-income">0.00 €</p>
+        </div>
+        <div class="expense-box">
+            <h4>Expenses</h4>
+            <p id="total-expenses">0.00 €</p>
+        </div>
+    </div>
+        </section>
+
+        <button id="reset-button">Reset</button>
+
+        <section class="add-expense">
+            <h2>Add new expense</h2>
+            <form id="expense-form">
+                <div>
+                    <label for="description">Description:</label>
+                    <input type="text" id="description" required>
+                </div>
+                <div>
+                    <label for="amount">Amount (€):</label>
+                    <input type="number" id="amount" step="0.01" required>
+                </div>
+                <div>
+                    <label for="type">Type:</label>
+                    <select id="type" required>
+                        <option value="expense">Expense</option>
+                        <option value="income">Income</option>
+                    </select>
+                </div>
+                <button type="submit">Add</button>
+            </form>
+        </section>
+
+        <section class="expense-list">
+            <h2>Expense-list</h2>
+            <div class="filters">
+                <label for="filter-type">Show:</label>
+                <select id="filter-type">
+                    <option value="all">All</option>
+                    <option value="income">Income</option>
+                    <option value="expense">Expenses</option>
+        </select>
+    </div>
+            <ul id="transactions">
+                </ul>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
