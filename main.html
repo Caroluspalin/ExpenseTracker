@@ -1,71 +1,91 @@
 <!DOCTYPE html>
-<html lang="fi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expense Tracker</title>
+    <title>Premium Expense Tracker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <header>
-        <h1>Expense Tracker</h1>
-    </header>
+    <div class="background-decor"></div>
 
-    <main>
-        <section class="summary">
-            <h2>Overview</h2>
-            <div id="balance-container" class="balance">
-                 <p>Total Balance: <span id="total-balance">0.00 €</span></p>
+    <main class="glass-card">
+        <header>
+            <h1>My Wallet</h1>
+            <button id="reset-button" class="btn-reset" title="Reset Data">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+            </button>
+        </header>
+
+        <section class="balance-card">
+            <div class="balance-info">
+                <span class="label">Total Balance</span>
+                <h2 id="total-balance">0.00 €</h2>
             </div>
-
-            <div class="financial-breakdown">
-        <div class="income-box">
-            <h4>Income</h4>
-            <p id="total-income">0.00 €</p>
-        </div>
-        <div class="expense-box">
-            <h4>Expenses</h4>
-            <p id="total-expenses">0.00 €</p>
-        </div>
-    </div>
+            
+            <div class="stats-row">
+                <div class="stat-item income">
+                    <div class="icon-box">↓</div>
+                    <div>
+                        <span class="label">Income</span>
+                        <p id="total-income">0.00 €</p>
+                    </div>
+                </div>
+                <div class="stat-item expense">
+                    <div class="icon-box">↑</div>
+                    <div>
+                        <span class="label">Expenses</span>
+                        <p id="total-expenses">0.00 €</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <button id="reset-button">Reset</button>
+        <section class="add-section">
+            <h3>New Transaction</h3>
+            <div class="floating-circle-wrapper">
+                <div class="circle c-1"></div>
+                <div class="circle c-2"></div>
+                
+                <form id="expense-form">
+                    <div class="input-group">
+                        <input type="text" id="description" placeholder="Description (e.g. Salary)" required>
+                    </div>
+                    
+                    <div class="input-row">
+                        <input type="number" id="amount" step="0.01" placeholder="0.00" required>
+                        
+                        <div class="select-wrapper">
+                            <select id="type" required>
+                                <option value="expense">Expense</option>
+                                <option value="income">Income</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary">
+                        <span>Add Transaction</span>
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"></path></svg>
+                    </button>
+                </form>
+            </div>
+        </section>
 
-        <section class="add-expense">
-            <h2>Add new expense</h2>
-            <form id="expense-form">
-                <div>
-                    <label for="description">Description:</label>
-                    <input type="text" id="description" required>
-                </div>
-                <div>
-                    <label for="amount">Amount (€):</label>
-                    <input type="number" id="amount" step="0.01" required>
-                </div>
-                <div>
-                    <label for="type">Type:</label>
-                    <select id="type" required>
-                        <option value="expense">Expense</option>
+        <section class="list-section">
+            <div class="list-header">
+                <h3>Transactions</h3>
+                <div class="filter-wrapper">
+                    <select id="filter-type">
+                        <option value="all">All</option>
                         <option value="income">Income</option>
+                        <option value="expense">Expense</option>
                     </select>
                 </div>
-                <button type="submit">Add</button>
-            </form>
-        </section>
+            </div>
 
-        <section class="expense-list">
-            <h2>Expense-list</h2>
-            <div class="filters">
-                <label for="filter-type">Show:</label>
-                <select id="filter-type">
-                    <option value="all">All</option>
-                    <option value="income">Income</option>
-                    <option value="expense">Expenses</option>
-        </select>
-    </div>
-            <ul id="transactions">
+            <ul id="transactions" class="transaction-list">
                 </ul>
         </section>
     </main>
