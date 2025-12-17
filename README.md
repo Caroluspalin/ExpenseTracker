@@ -1,5 +1,6 @@
-<img width="1440" height="900" alt="Screenshot 2025-12-17 at 2 16 16" src="https://github.com/user-attachments/assets/b333765d-1f7e-48fe-be0a-3a131cd709c8" />
-🚀 Expense Tracker (Kuluseuraaja)
+
+<img width="1440" height="900" alt="Screenshot 2025-12-17 at 2 17 54" src="https://github.com/user-attachments/assets/e678aece-6fea-4be9-892e-ed53ee2712ad" />
+🚀 Expense Tracker 
 This is a responsive, single-page application built to track personal income and expenses. It provides a real-time overview of financial health and saves all data locally in the user's browser.
 
 ✨ Key Features
