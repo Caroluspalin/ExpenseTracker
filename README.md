@@ -1,60 +1,40 @@
 
-<img width="1440" height="900" alt="Screenshot 2025-12-17 at 2 17 54" src="https://github.com/user-attachments/assets/e678aece-6fea-4be9-892e-ed53ee2712ad" />
-🚀 Expense Tracker 
-This is a responsive, single-page application built to track personal income and expenses. It provides a real-time overview of financial health and saves all data locally in the user's browser.
+<img width="1440" height="900" alt="Screenshot 2025-12-17 at 2 17 54" src="Kuva.png" />
+A modern, high-fidelity expense tracking web application featuring a "Glassmorphism" UI design. This application allows users to track income and expenses with a professional fintech-inspired interface.
 
-✨ Key Features
-Add Transactions: Easily add new income or expense entries with a description, amount, and type (income/expense).
+![Project Preview](preview.png)
+*(Note: Replace 'preview.png' with a screenshot of your app once you run it!)*
 
-Dynamic Summary: Calculates and displays the Total Balance, Total Income, and Total Expenses in real-time.
+## ✨ Features
 
-Balance Visual Feedback: The Total Balance is visually color-coded (Green for positive, Red for negative) for quick financial assessment.
+- **Modern UI/UX:** Clean, premium aesthetic using glassmorphism, soft shadows, and smooth CSS animations.
+- **Transaction Management:** Add income and expenses with descriptions and amounts.
+- **Real-time Calculations:** Automatically updates Total Balance, Total Income, and Total Expenses.
+- **Data Persistence:** Uses LocalStorage to save your transactions even after refreshing the browser.
+- **Filtering:** Filter transactions by "All", "Income", or "Expense".
+- **Responsive Design:** Fully optimized for desktop and mobile devices.
+- **Formatted Currency:** automatic Euro formatting (e.g., `1 250,00 €`).
 
-Transaction List: Displays a complete list of transactions, color-coded by type.
+## 🛠️ Tech Stack
 
-Delete Entries: Each transaction can be individually deleted from the list.
+- **HTML5:** Semantic structure.
+- **CSS3:** Flexbox, CSS Variables, Keyframe Animations, Backdrop Filter.
+- **JavaScript (ES6+):** DOM manipulation, Event handling, LocalStorage API, Intl.NumberFormat.
 
-Filtering: Allows the user to filter the transaction list to show only Income, only Expenses, or All entries.
+## 🚀 How to Run
 
-Data Persistence: Uses the browser's Local Storage API to ensure all transactions are saved and persist even if the page is reloaded or the browser is closed.
+No installation or build steps required. This is a pure Vanilla JS project.
 
-Reset Function: Includes a dedicated button to clear all stored data and reset the tracker to zero.
+1. **Clone or Download** this repository.
+2. Navigate to the project folder.
+3. Open `index.html` in your web browser (Chrome, Firefox, Safari, etc.).
 
-🛠️ Technologies Used
-HTML5 (Structure and Semantics)
+## 📂 Project Structure
 
-CSS3 (Styling, Dark Mode, Flexbox/Grid for layout)
-
-JavaScript (ES6+) (Core logic and DOM manipulation)
-
-🎯 Learning & Practice Points
-This project served as an excellent opportunity to practice and implement several core JavaScript and web development concepts, particularly the following features for the first time:
-
-1. Local Storage Implementation
-
-This was the first time implementing full data persistence using the browser's native storage. This involved:
-
-Loading data on startup (JSON.parse(localStorage.getItem(...))).
-
-Saving data upon every modification (localStorage.setItem(..., JSON.stringify(...))).
-
-2. Advanced Array Methods (Functional JS)
-
-The project heavily relies on modern JavaScript array methods for clean and efficient data processing:
-
-Array.prototype.filter(): Used extensively for calculating total income and total expenses, and for implementing the list filtering feature.
-
-Array.prototype.reduce(): Used to aggregate transaction amounts for calculating the totals and net balance.
-
-3. Dynamic DOM Manipulation
-
-The entire list of transactions is built dynamically in JavaScript based on the transactions array. This ensures that the UI is always a direct reflection of the underlying data state.
-
-4. Event Delegation
-
-Handling delete functionality by attaching a single event listener to the container (or relying on individual listeners for dynamically created elements) and reading the transaction ID via data-id attributes.
-
-⚙️ How to Run
-Clone this repository (or copy the HTML, CSS, and JS files into a single folder).
-
-Open index.html in your web browser.
+```text
+/expense-tracker
+│
+├── index.html    # The main structure
+├── style.css     # Styling, animations, and responsive design
+├── script.js     # Logic, state management, and DOM updates
+└── README.md     # Project documentation
